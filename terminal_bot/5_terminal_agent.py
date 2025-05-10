@@ -7,7 +7,8 @@ load_dotenv()
 
 # Initialize the AI agent with the specified model
 agent = Agent(
-    model=Groq(id="llama-3.3-70b-versatile")
+    #model=Groq(id="llama-3.3-70b-versatile")
+    model=Groq(id="deepseek-r1-distill-qwen-32b")
 )
 
 def chat_with_agent():
@@ -23,8 +24,6 @@ def chat_with_agent():
         
         # Generate a response from the agent
         response = agent.print_response(user_input)
-        print(f"AI: {response}")
+        #print(f"AI: {response}")
 
-if __name__ == "__main__":
-    chat_with_agent()
-
+chat_with_agent()
